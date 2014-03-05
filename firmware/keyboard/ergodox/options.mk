@@ -30,7 +30,8 @@ KEYBOARD_LAYOUTS := \
 	qwerty--ben \
 	colemak--kinesis-mod \
 	dvorak--kinesis-mod \
-	qwerty--kinesis-mod
+	qwerty--kinesis-mod \
+	neo2--tschulte
 # a list of all available layouts for this keyboard
 
 # -----------------------------------------------------------------------------
