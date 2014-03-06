@@ -78,6 +78,38 @@ KEYS__DEFAULT(    ue,             KEYBOARD__LeftBracket_LeftBrace      );
 KEYS__DEFAULT(    oe,             KEYBOARD__Semicolon_Colon            );
 KEYS__DEFAULT(    ae,             KEYBOARD__SingleQuote_DoubleQuote    );
 
+// --- (shifted) ---
+KEYS__SHIFTED(    A,              KEYBOARD__a_A                        );
+KEYS__SHIFTED(    B,              KEYBOARD__b_B                        );
+KEYS__SHIFTED(    C,              KEYBOARD__c_C                        );
+KEYS__SHIFTED(    D,              KEYBOARD__d_D                        );
+KEYS__SHIFTED(    E,              KEYBOARD__e_E                        );
+KEYS__SHIFTED(    F,              KEYBOARD__f_F                        );
+KEYS__SHIFTED(    G,              KEYBOARD__g_G                        );
+KEYS__SHIFTED(    H,              KEYBOARD__h_H                        );
+KEYS__SHIFTED(    I,              KEYBOARD__i_I                        );
+KEYS__SHIFTED(    J,              KEYBOARD__j_J                        );
+KEYS__SHIFTED(    K,              KEYBOARD__k_K                        );
+KEYS__SHIFTED(    L,              KEYBOARD__l_L                        );
+KEYS__SHIFTED(    M,              KEYBOARD__m_M                        );
+KEYS__SHIFTED(    N,              KEYBOARD__n_N                        );
+KEYS__SHIFTED(    O,              KEYBOARD__o_O                        );
+KEYS__SHIFTED(    P,              KEYBOARD__p_P                        );
+KEYS__SHIFTED(    Q,              KEYBOARD__q_Q                        );
+KEYS__SHIFTED(    R,              KEYBOARD__r_R                        );
+KEYS__SHIFTED(    S,              KEYBOARD__s_S                        );
+KEYS__SHIFTED(    T,              KEYBOARD__t_T                        );
+KEYS__SHIFTED(    U,              KEYBOARD__u_U                        );
+KEYS__SHIFTED(    V,              KEYBOARD__v_V                        );
+KEYS__SHIFTED(    W,              KEYBOARD__w_W                        );
+KEYS__SHIFTED(    X,              KEYBOARD__x_X                        );
+KEYS__SHIFTED(    Y,              KEYBOARD__z_Z                        );
+KEYS__SHIFTED(    Z,              KEYBOARD__y_Y                        );
+KEYS__DEFAULT(    SZ,             KEYBOARD__Dash_Underscore            );
+KEYS__DEFAULT(    UE,             KEYBOARD__LeftBracket_LeftBrace      );
+KEYS__DEFAULT(    OE,             KEYBOARD__Semicolon_Colon            );
+KEYS__DEFAULT(    AE,             KEYBOARD__SingleQuote_DoubleQuote    );
+
 // numbers
 KEYS__DEFAULT(    0,              KEYBOARD__0_RightParenthesis         );
 KEYS__DEFAULT(    1,              KEYBOARD__1_Exclamation              );
@@ -122,46 +154,50 @@ KEYS__DEFAULT(    space,          KEYBOARD__Spacebar                   );
 KEYS__DEFAULT(    tab,            KEYBOARD__Tab                        );
 
 // dead keys
-KEYS__DEFAULT(aigu, KEYBOARD__Equal_Plus);
-KEYS__SHIFTED(grave, KEYBOARD__Equal_Plus);
-KEYS__DEFAULT(circumflex, KEYBOARD__GraveAccent_Tilde);
+KEYS__DEFAULT(    dead_aigu,      KEYBOARD__Equal_Plus                 );
+KEYS__SHIFTED(    dead_grave,     KEYBOARD__Equal_Plus                 );
+KEYS__DEFAULT(    dead_caret,     KEYBOARD__GraveAccent_Tilde          );
+
+KEYS__NON_DEAD(   aigu,           KEYBOARD__Equal_Plus                 );
+KEYS__NON_DEAD(   grave,          KEYBOARD__Equal_Plus                 );
+KEYS__NON_DEAD(   caret,          KEYBOARD__GraveAccent_Tilde          );
 
 
 // --- (shifted) ---
-KEYS__SHIFTED(    parenL,         KEYBOARD__8_Asterisk          );
+KEYS__SHIFTED(    parenL,         KEYBOARD__8_Asterisk                 );
 KEYS__SHIFTED(    parenR,         KEYBOARD__9_LeftParenthesis);
 KEYS__SHIFTED(    exclam,         KEYBOARD__1_Exclamation              );
-KEYS__ALT_GR(     at,             KEYBOARD__q_Q                       );
+KEYS__ALT_GR (    at,             KEYBOARD__q_Q                        );
 KEYS__SHIFTED(    dollar,         KEYBOARD__4_Dollar                   );
-KEYS__ALT_GR(eur, KEYBOARD__e_E);
+KEYS__ALT_GR (    eur,            KEYBOARD__e_E                        );
 KEYS__SHIFTED(    percent,        KEYBOARD__5_Percent                  );
-KEYS__SHIFTED(    amp,            KEYBOARD__6_Caret);
-KEYS__SHIFTED(    asterisk,       KEYBOARD__RightBracket_RightBrace                 );
+KEYS__SHIFTED(    amp,            KEYBOARD__6_Caret                    );
+KEYS__SHIFTED(    asterisk,       KEYBOARD__RightBracket_RightBrace    );
 
 // ---
-KEYS__ALT_GR(    bkslash,        KEYBOARD__Dash_Underscore             );
-KEYS__ALT_GR(    brktL,          KEYBOARD__8_Asterisk);
-KEYS__ALT_GR(    brktR,          KEYBOARD__9_LeftParenthesis    );
+KEYS__ALT_GR (    bkslash,        KEYBOARD__Dash_Underscore            );
+KEYS__ALT_GR (    brktL,          KEYBOARD__8_Asterisk);
+KEYS__ALT_GR (    brktR,          KEYBOARD__9_LeftParenthesis          );
 KEYS__DEFAULT(    comma,          KEYBOARD__Comma_LessThan             );
-KEYS__DEFAULT(    dash,           KEYBOARD__Slash_Question);
-KEYS__SHIFTED(    equal,          KEYBOARD__0_RightParenthesis                 );
+KEYS__DEFAULT(    dash,           KEYBOARD__Slash_Question             );
+KEYS__SHIFTED(    equal,          KEYBOARD__0_RightParenthesis         );
 KEYS__DEFAULT(    period,         KEYBOARD__Period_GreaterThan         );
-KEYS__SHIFTED(    quote,          KEYBOARD__Backslash_Pipe);
-KEYS__SHIFTED(    semicol,        KEYBOARD__Comma_LessThan  );
-KEYS__SHIFTED(    slash,          KEYBOARD__7_Ampersand);
+KEYS__SHIFTED(    quote,          KEYBOARD__Backslash_Pipe             );
+KEYS__SHIFTED(    semicol,        KEYBOARD__Comma_LessThan             );
+KEYS__SHIFTED(    slash,          KEYBOARD__7_Ampersand                );
 // --- (shifted) ---
-KEYS__DEFAULT(    pipe,           KEYPAD__Pipe);
-KEYS__ALT_GR(    braceL,         KEYBOARD__7_Ampersand      );
-KEYS__ALT_GR(    braceR,         KEYBOARD__0_RightParenthesis);
-KEYS__DEFAULT(    lessThan,       KEYBOARD__International1);
-KEYS__SHIFTED(    undersc,        KEYBOARD__Slash_Question);
-KEYS__DEFAULT(    plus,           KEYBOARD__RightBracket_RightBrace);
-KEYS__ALT_GR(    tilde,          KEYBOARD__RightBracket_RightBrace);
-KEYS__DEFAULT(    grtrThan,       KEYPAD__GreaterThan);
-KEYS__SHIFTED(    dblQuote,       KEYBOARD__2_At);
-KEYS__SHIFTED(    colon,          KEYBOARD__Period_GreaterThan            );
-KEYS__SHIFTED(    question,       KEYBOARD__Dash_Underscore         );
-KEYS__DEFAULT(    pound,          KEYBOARD__Backslash_Pipe);
+KEYS__ALT_GR (    pipe,           KEYBOARD__LANG5                      );
+KEYS__ALT_GR (    braceL,         KEYBOARD__7_Ampersand                );
+KEYS__ALT_GR (    braceR,         KEYBOARD__0_RightParenthesis         );
+KEYS__DEFAULT(    lessThan,       KEYBOARD__LANG5                      );
+KEYS__SHIFTED(    undersc,        KEYBOARD__Slash_Question             );
+KEYS__DEFAULT(    plus,           KEYBOARD__RightBracket_RightBrace    );
+KEYS__ALT_GR (    tilde,          KEYBOARD__RightBracket_RightBrace    );
+KEYS__SHIFTED(    grtrThan,       KEYBOARD__LANG5                      );
+KEYS__SHIFTED(    dblQuote,       KEYBOARD__2_At                       );
+KEYS__SHIFTED(    colon,          KEYBOARD__Period_GreaterThan         );
+KEYS__SHIFTED(    question,       KEYBOARD__Dash_Underscore            );
+KEYS__DEFAULT(    pound,          KEYBOARD__Backslash_Pipe             );
 
 // --- (keypad) ---
 KEYS__DEFAULT(    kpEnter,        KEYPAD__Enter                        );
@@ -225,20 +261,20 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-     esc,        1,        2,        3,        4,        5,      aigu,
+     esc,        1,        2,        3,        4,        5,      dead_aigu,
      tab,        x,        v,        l,        c,        w,      bs,
      nop,        u,        i,        a,        e,        o,
      shiftL,     ue,       oe,       ae,       p,        z,      enter,
-                 ctrlL,    altL,     guiL,     lpupo2l2, lpupo1l1,
+     ctrlL,      altL,     guiL,     lpupo2l2, lpupo1l1,
                                                                  ctrlL,    lpupo1l1,
                                                         nop,     nop,      altL,
                                                         bs,      shiftL,   end,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               grave,    6,        7,        8,        9,        0,      circumflex,
-               bs,       k,        h,        g,        f,        q,      sz,
-                         s,        n,        r,        t,        d,      y,
-               enter,    b,        m,        comma,    period,   j,      shiftR,
-                         lpupo1l1, lpupo2l2, nop,      nop,      nop,
+               dead_grave,    6,        7,        8,        9,        0,      dead_caret,
+               bs,            k,        h,        g,        f,        q,      sz,
+                              s,        n,        r,        t,        d,      y,
+               enter,         b,        m,        comma,    period,   j,      shiftR,
+                                        lpupo1l1, lpupo2l2, guiR,     altR,   ctrlR,
    ins,    ctrlR,
    pageU,      nop,      nop,
    pageD,    shiftR,    space  ),
@@ -249,20 +285,20 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-  btldr,       F1,       F2,       F3,       F4,       F5,      F6,
-  transp,   nop,   undersc,    brktL,    brktR,      transp,   transp,
-  transp,  bkslash,    slash,     braceL,        braceR,    asterisk,
-  transp,        pound,        dollar,        pipe,        tilde,     transp, transp,
-  transp,   transp,   transp,   transp,   transp,
-                                                              transp,   transp,
-                                                    transp,   transp,   transp,
-                                                    transp,   transp,   transp,
+  btldr,       F1,         F2,         F3,          F4,        F5,        F6,
+  transp,      nop,        undersc,    brktL,       brktR,     caret,     transp,
+  transp,      bkslash,    slash,      braceL,      braceR,    asterisk,
+  transp,      pound,      dollar,     pipe,        tilde,     grave,     transp,
+  transp,      transp,     transp,     transp,      transp,
+                                                                          transp,   transp,
+                                                                transp,   transp,   transp,
+                                                                transp,   transp,   transp,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               F7,       F8,       F9,       F10,       F11,      F12,    nop,
-               transp,      exclam,  lessThan, grtrThan,   equal,  amp, transp,
-                     question,        parenL,   parenR,   dash,    colon, at,
-          transp, plus,        percent,        dblQuote,        quote,        semicol,     transp,
-                                transp,   transp,   transp,   transp,   transp,
+               F7,       F8,           F9,          F10,        F11,      F12,         transp,
+               transp,   exclam,       lessThan,    grtrThan,   equal,    amp,         transp,
+                         question,     parenL,      parenR,     dash,     colon,       at,
+               transp,   plus,         percent,     dblQuote,   quote,    semicol,     transp,
+                                       transp,      transp,     transp,   transp,      transp,
   transp,   transp,
   transp,   transp,   transp,
   transp,   transp,   transp  ),
@@ -273,23 +309,23 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-   btldr,      transp,      transp,      transp,      transp,      transp,      transp,
-   transp,      bs,      bs,      arrowU,      del,      transp,      transp,
-   transp,      transp, arrowL,      arrowD,      arrowR,      transp,
+   btldr,       transp,      transp,      transp,      transp,      transp,      transp,
+   transp,      bs,          bs,          arrowU,      del,         transp,      transp,
+   transp,      transp,      arrowL,      arrowD,      arrowR,      transp,
    transp,      transp,      transp,      transp,      transp,      transp,      transp,
    transp,      transp,      transp,      transp,      transp,
-							    transp,      transp,
-							    transp,      transp,      transp,
-							    transp,      transp,      transp,
+                                                                                  transp,      transp,
+                                                                     transp,      transp,      transp,
+                                                                     transp,      transp,      transp,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               transp,      transp,      transp,      transp,      transp,      transp, transp,
-               transp,      transp,      7,      8,      9,      transp, transp,
-			   transp,      4,      5,      6,      comma, period,
-	       transp,      transp,      1,      2,      3,      transp,      transp,
-                                   0,      transp,      transp,      transp,      transp,
+               transp,      transp,      transp,      transp,      transp,      transp,     transp,
+               transp,      transp,      kp7,         kp8,         kp9,         transp,     transp,
+                            transp,      kp4,         kp5,         kp6,         comma,      period,
+               transp,      transp,      kp1,         kp2,         kp3,         transp,     transp,
+                                         kp0,         transp,      transp,      transp,     transp,
      transp,      transp,
      transp,      transp,      transp,
-     transp,      transp,      0  ),
+     transp,      transp,      transp  ),
 
 // ............................................................................
 };
