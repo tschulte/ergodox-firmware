@@ -5,16 +5,15 @@
  * ------------------------------------------------------------------------- */
 
 /**                                                                 description
- * A layout modeled after the [Arensito layout]
- * (http://www.pvv.org/~hakonhal/main.cgi/keyboard)
- * by Håkon Hallingstad
+ * A Layout for [Neo2]
+ * (http://neo-layout.org/).
  *
  * Implements the "layout" section of '.../firmware/keyboard.h'
  *
- * TODO:
- * - separate most of this into a template (so i can have different versions of
- *   the "ben" layout, just like there are different "kinesis-mod" layouts)?
- *   lol
+ * This layout assumes that the PC the keyboard is connected to uses the German
+ * QWERTZ layout, i.e. you don't have to install any special driver to use the
+ * layout.
+ *
  */
 
 
@@ -27,6 +26,9 @@
 // ----------------------------------------------------------------------------
 // keys
 // ----------------------------------------------------------------------------
+
+// We need to use our own definitions
+#define ERGODOX_FIRMWARE__FIRMWARE__LIB__LAYOUT__KEYS__H
 
 #include "./fragments/keys.part.h"
 
@@ -44,13 +46,171 @@
 
 #include "./fragments/matrix-control.part.h"
 
-KEYS__DEFAULT(sz, KEYBOARD__Dash_Underscore);
-KEYS__DEFAULT(ue, KEYBOARD__LeftBracket_LeftBrace);
-KEYS__DEFAULT(oe, KEYBOARD__Semicolon_Colon);
-KEYS__DEFAULT(ae, KEYBOARD__SingleQuote_DoubleQuote);
-KEYS__DEFAULT(accent_aigu, KEYBOARD__Equal_Plus);
-KEYS__SHIFTED(accent_grave, KEYBOARD__Equal_Plus);
-KEYS__DEFAULT(accent_circumflex, KEYBOARD__GraveAccent_Tilde);
+// letters
+KEYS__DEFAULT(    a,              KEYBOARD__a_A                        );
+KEYS__DEFAULT(    b,              KEYBOARD__b_B                        );
+KEYS__DEFAULT(    c,              KEYBOARD__c_C                        );
+KEYS__DEFAULT(    d,              KEYBOARD__d_D                        );
+KEYS__DEFAULT(    e,              KEYBOARD__e_E                        );
+KEYS__DEFAULT(    f,              KEYBOARD__f_F                        );
+KEYS__DEFAULT(    g,              KEYBOARD__g_G                        );
+KEYS__DEFAULT(    h,              KEYBOARD__h_H                        );
+KEYS__DEFAULT(    i,              KEYBOARD__i_I                        );
+KEYS__DEFAULT(    j,              KEYBOARD__j_J                        );
+KEYS__DEFAULT(    k,              KEYBOARD__k_K                        );
+KEYS__DEFAULT(    l,              KEYBOARD__l_L                        );
+KEYS__DEFAULT(    m,              KEYBOARD__m_M                        );
+KEYS__DEFAULT(    n,              KEYBOARD__n_N                        );
+KEYS__DEFAULT(    o,              KEYBOARD__o_O                        );
+KEYS__DEFAULT(    p,              KEYBOARD__p_P                        );
+KEYS__DEFAULT(    q,              KEYBOARD__q_Q                        );
+KEYS__DEFAULT(    r,              KEYBOARD__r_R                        );
+KEYS__DEFAULT(    s,              KEYBOARD__s_S                        );
+KEYS__DEFAULT(    t,              KEYBOARD__t_T                        );
+KEYS__DEFAULT(    u,              KEYBOARD__u_U                        );
+KEYS__DEFAULT(    v,              KEYBOARD__v_V                        );
+KEYS__DEFAULT(    w,              KEYBOARD__w_W                        );
+KEYS__DEFAULT(    x,              KEYBOARD__x_X                        );
+KEYS__DEFAULT(    y,              KEYBOARD__z_Z                        );
+KEYS__DEFAULT(    z,              KEYBOARD__y_Y                        );
+KEYS__DEFAULT(    sz,             KEYBOARD__Dash_Underscore            );
+KEYS__DEFAULT(    ue,             KEYBOARD__LeftBracket_LeftBrace      );
+KEYS__DEFAULT(    oe,             KEYBOARD__Semicolon_Colon            );
+KEYS__DEFAULT(    ae,             KEYBOARD__SingleQuote_DoubleQuote    );
+
+// numbers
+KEYS__DEFAULT(    0,              KEYBOARD__0_RightParenthesis         );
+KEYS__DEFAULT(    1,              KEYBOARD__1_Exclamation              );
+KEYS__DEFAULT(    2,              KEYBOARD__2_At                       );
+KEYS__DEFAULT(    3,              KEYBOARD__3_Pound                    );
+KEYS__DEFAULT(    4,              KEYBOARD__4_Dollar                   );
+KEYS__DEFAULT(    5,              KEYBOARD__5_Percent                  );
+KEYS__DEFAULT(    6,              KEYBOARD__6_Caret                    );
+KEYS__DEFAULT(    7,              KEYBOARD__7_Ampersand                );
+KEYS__DEFAULT(    8,              KEYBOARD__8_Asterisk                 );
+KEYS__DEFAULT(    9,              KEYBOARD__9_LeftParenthesis          );
+
+// --- (keypad) ---
+KEYS__DEFAULT(    kp0,            KEYPAD__0_Insert                     );
+KEYS__DEFAULT(    kp1,            KEYPAD__1_End                        );
+KEYS__DEFAULT(    kp2,            KEYPAD__2_DownArrow                  );
+KEYS__DEFAULT(    kp3,            KEYPAD__3_PageDown                   );
+KEYS__DEFAULT(    kp4,            KEYPAD__4_LeftArrow                  );
+KEYS__DEFAULT(    kp5,            KEYPAD__5                            );
+KEYS__DEFAULT(    kp6,            KEYPAD__6_RightArrow                 );
+KEYS__DEFAULT(    kp7,            KEYPAD__7_Home                       );
+KEYS__DEFAULT(    kp8,            KEYPAD__8_UpArrow                    );
+KEYS__DEFAULT(    kp9,            KEYPAD__9_PageUp                     );
+
+// function
+KEYS__DEFAULT(    F1,             KEYBOARD__F1                         );
+KEYS__DEFAULT(    F2,             KEYBOARD__F2                         );
+KEYS__DEFAULT(    F3,             KEYBOARD__F3                         );
+KEYS__DEFAULT(    F4,             KEYBOARD__F4                         );
+KEYS__DEFAULT(    F5,             KEYBOARD__F5                         );
+KEYS__DEFAULT(    F6,             KEYBOARD__F6                         );
+KEYS__DEFAULT(    F7,             KEYBOARD__F7                         );
+KEYS__DEFAULT(    F8,             KEYBOARD__F8                         );
+KEYS__DEFAULT(    F9,             KEYBOARD__F9                         );
+KEYS__DEFAULT(    F10,            KEYBOARD__F10                        );
+KEYS__DEFAULT(    F11,            KEYBOARD__F11                        );
+KEYS__DEFAULT(    F12,            KEYBOARD__F12                        );
+
+// whitespace and symbols
+KEYS__DEFAULT(    enter,          KEYBOARD__ReturnEnter                );
+KEYS__DEFAULT(    space,          KEYBOARD__Spacebar                   );
+KEYS__DEFAULT(    tab,            KEYBOARD__Tab                        );
+
+// dead keys
+KEYS__DEFAULT(aigu, KEYBOARD__Equal_Plus);
+KEYS__SHIFTED(grave, KEYBOARD__Equal_Plus);
+KEYS__DEFAULT(circumflex, KEYBOARD__GraveAccent_Tilde);
+
+
+// --- (shifted) ---
+KEYS__SHIFTED(    parenL,         KEYBOARD__8_Asterisk          );
+KEYS__SHIFTED(    parenR,         KEYBOARD__9_LeftParenthesis);
+KEYS__SHIFTED(    exclam,         KEYBOARD__1_Exclamation              );
+KEYS__ALT_GR(     at,             KEYBOARD__q_Q                       );
+KEYS__SHIFTED(    dollar,         KEYBOARD__4_Dollar                   );
+KEYS__ALT_GR(eur, KEYBOARD__e_E);
+KEYS__SHIFTED(    percent,        KEYBOARD__5_Percent                  );
+KEYS__SHIFTED(    amp,            KEYBOARD__6_Caret);
+KEYS__SHIFTED(    asterisk,       KEYBOARD__RightBracket_RightBrace                 );
+
+// ---
+KEYS__ALT_GR(    bkslash,        KEYBOARD__Dash_Underscore             );
+KEYS__ALT_GR(    brktL,          KEYBOARD__8_Asterisk);
+KEYS__ALT_GR(    brktR,          KEYBOARD__9_LeftParenthesis    );
+KEYS__DEFAULT(    comma,          KEYBOARD__Comma_LessThan             );
+KEYS__DEFAULT(    dash,           KEYBOARD__Slash_Question);
+KEYS__SHIFTED(    equal,          KEYBOARD__0_RightParenthesis                 );
+KEYS__DEFAULT(    period,         KEYBOARD__Period_GreaterThan         );
+KEYS__SHIFTED(    quote,          KEYBOARD__Backslash_Pipe);
+KEYS__SHIFTED(    semicol,        KEYBOARD__Comma_LessThan  );
+KEYS__SHIFTED(    slash,          KEYBOARD__7_Ampersand);
+// --- (shifted) ---
+KEYS__DEFAULT(    pipe,           KEYPAD__Pipe);
+KEYS__ALT_GR(    braceL,         KEYBOARD__7_Ampersand      );
+KEYS__ALT_GR(    braceR,         KEYBOARD__0_RightParenthesis);
+KEYS__DEFAULT(    lessThan,       KEYBOARD__International1);
+KEYS__SHIFTED(    undersc,        KEYBOARD__Slash_Question);
+KEYS__DEFAULT(    plus,           KEYBOARD__RightBracket_RightBrace);
+KEYS__ALT_GR(    tilde,          KEYBOARD__RightBracket_RightBrace);
+KEYS__DEFAULT(    grtrThan,       KEYPAD__GreaterThan);
+KEYS__SHIFTED(    dblQuote,       KEYBOARD__2_At);
+KEYS__SHIFTED(    colon,          KEYBOARD__Period_GreaterThan            );
+KEYS__SHIFTED(    question,       KEYBOARD__Dash_Underscore         );
+KEYS__DEFAULT(    pound,          KEYBOARD__Backslash_Pipe);
+
+// --- (keypad) ---
+KEYS__DEFAULT(    kpEnter,        KEYPAD__Enter                        );
+// ---
+KEYS__DEFAULT(    kpDec,          KEYPAD__Period_Delete                );
+// ---
+KEYS__DEFAULT(    kpAdd,          KEYPAD__Plus                         );
+KEYS__DEFAULT(    kpSub,          KEYPAD__Minus                        );
+KEYS__DEFAULT(    kpMul,          KEYPAD__Asterisk                     );
+KEYS__DEFAULT(    kpDiv,          KEYPAD__Slash                        );
+
+// text control
+KEYS__DEFAULT(    arrowU,         KEYBOARD__UpArrow                    );
+KEYS__DEFAULT(    arrowD,         KEYBOARD__DownArrow                  );
+KEYS__DEFAULT(    arrowL,         KEYBOARD__LeftArrow                  );
+KEYS__DEFAULT(    arrowR,         KEYBOARD__RightArrow                 );
+KEYS__DEFAULT(    bs,             KEYBOARD__DeleteBackspace            );
+KEYS__DEFAULT(    del,            KEYBOARD__DeleteForward              );
+KEYS__DEFAULT(    end,            KEYBOARD__End                        );
+KEYS__DEFAULT(    esc,            KEYBOARD__Escape                     );
+KEYS__DEFAULT(    home,           KEYBOARD__Home                       );
+KEYS__DEFAULT(    ins,            KEYBOARD__Insert                     );
+KEYS__DEFAULT(    pageU,          KEYBOARD__PageUp                     );
+KEYS__DEFAULT(    pageD,          KEYBOARD__PageDown                   );
+
+// modifier
+KEYS__DEFAULT(    altR,           KEYBOARD__RightAlt                   );
+KEYS__DEFAULT(    altL,           KEYBOARD__LeftAlt                    );
+KEYS__DEFAULT(    ctrlL,          KEYBOARD__LeftControl                );
+KEYS__DEFAULT(    ctrlR,          KEYBOARD__RightControl               );
+KEYS__DEFAULT(    guiL,           KEYBOARD__LeftGUI                    );
+KEYS__DEFAULT(    guiR,           KEYBOARD__RightGUI                   );
+KEYS__DEFAULT(    shiftL,         KEYBOARD__LeftShift                  );
+KEYS__DEFAULT(    shiftR,         KEYBOARD__RightShift                 );
+
+// lock
+KEYS__DEFAULT(    caps,           KEYBOARD__CapsLock                   );
+KEYS__DEFAULT(    scrl,           KEYBOARD__ScrollLock                 );
+// --- (keypad) ---
+KEYS__DEFAULT(    num,            KEYPAD__NumLock_Clear                );
+
+// special function
+KEYS__DEFAULT(    app,            KEYBOARD__Application                );
+KEYS__DEFAULT(    pause,          KEYBOARD__Pause                      );
+KEYS__DEFAULT(    prScr,          KEYBOARD__PrintScreen                );
+
+// international and language
+KEYS__DEFAULT(    nonUSBkslash,   KEYBOARD__NonUS_Backslash_Pipe       );
+KEYS__DEFAULT(    nonUSPound,     KEYBOARD__NonUS_Pound_Tilde          );
 
 // ----------------------------------------------------------------------------
 // layout
@@ -65,20 +225,20 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-     esc,        1,        2,        3,        4,        5,      accent_aigu,
+     esc,        1,        2,        3,        4,        5,      aigu,
      tab,        x,        v,        l,        c,        w,      bs,
      nop,        u,        i,        a,        e,        o,
-     shiftL,     ue,       oe,       ae,       p,        y,      enter,
+     shiftL,     ue,       oe,       ae,       p,        z,      enter,
                  ctrlL,    altL,     guiL,     lpupo2l2, lpupo1l1,
-                                                               ctrlL,      lpupo1l1,
-                                                       nop,      nop,      altL,
+                                                                 ctrlL,    lpupo1l1,
+                                                        nop,     nop,      altL,
                                                         bs,      shiftL,   end,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               accent_grave,     6,        7,        8,        9,        0,      accent_circumflex,
-               bs,              k,        h,        g,        f,        q,      sz,
-                                 s,        n,        r,        t,        d,      z,
-               enter,            b,        m,        comma,    period,   j,      shiftR,
-                                 lpupo1l1, lpupo2l2, nop,      nop,      nop,
+               grave,    6,        7,        8,        9,        0,      circumflex,
+               bs,       k,        h,        g,        f,        q,      sz,
+                         s,        n,        r,        t,        d,      y,
+               enter,    b,        m,        comma,    period,   j,      shiftR,
+                         lpupo1l1, lpupo2l2, nop,      nop,      nop,
    ins,    ctrlR,
    pageU,      nop,      nop,
    pageD,    shiftR,    space  ),
@@ -90,18 +250,18 @@ static layout_t layout PROGMEM = {
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
   btldr,       F1,       F2,       F3,       F4,       F5,      F6,
-  transp,   braceL,   braceR,    brktL,    brktR,      nop,   nop,
-  transp,  nonUSBkslash,    amp,     dash,        dash,    nop,
-  transp,        6,        7,        8,        9,     plus, nop,
+  transp,   nop,   undersc,    brktL,    brktR,      transp,   transp,
+  transp,  bkslash,    slash,     braceL,        braceR,    asterisk,
+  transp,        pound,        dollar,        pipe,        tilde,     transp, transp,
   transp,   transp,   transp,   transp,   transp,
                                                               transp,   transp,
                                                     transp,   transp,   transp,
                                                     transp,   transp,   transp,
 // right hand ..... ......... ......... ......... ......... ......... .........
                F7,       F8,       F9,       F10,       F11,      F12,    nop,
-            nop,      nop,  undersc, lessThan, grtrThan,   dollar,  volumeU,
-                     bkslash,        1,   asterisk,   parenL,    equal,  volumeD,
-          nop, asterisk,        2,        3,        4,        5,     mute,
+               transp,      exclam,  lessThan, grtrThan,   equal,  amp, transp,
+                     question,        parenL,   parenR,   dash,    colon, at,
+          transp, plus,        percent,        dblQuote,        quote,        semicol,     transp,
                                 transp,   transp,   transp,   transp,   transp,
   transp,   transp,
   transp,   transp,   transp,
@@ -113,23 +273,23 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-   btldr,      nop,      nop,      nop,      nop,      nop,      nop,
-     nop,      bs,      arrowU,      del,      nop,      nop,      nop,
-     nop,      arrowL,      arrowD,      arrowR,      nop,      nop,
-     nop,      nop,      nop,      nop,      nop,      nop,      nop,
-     nop,      nop,      nop,      nop,      nop,
-                                                                 nop,      nop,
-                                                       nop,      nop,      nop,
-                                                       nop,      nop,      nop,
+   btldr,      transp,      transp,      transp,      transp,      transp,      transp,
+   transp,      bs,      bs,      arrowU,      del,      transp,      transp,
+   transp,      transp, arrowL,      arrowD,      arrowR,      transp,
+   transp,      transp,      transp,      transp,      transp,      transp,      transp,
+   transp,      transp,      transp,      transp,      transp,
+							    transp,      transp,
+							    transp,      transp,      transp,
+							    transp,      transp,      transp,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               nop,      nop,      nop,      nop,      nop,      nop, nop,
-               nop,      nop,      7,      8,      9,      nop, nop,
-                         nop,      4,      5,      6,      comma, period,
-               nop,      nop,      1,      2,      3,      nop,      nop,
-                                   0,      nop,      nop,      nop,      nop,
-     nop,      nop,
-     nop,      nop,      nop,
-     nop,      nop,      0  ),
+               transp,      transp,      transp,      transp,      transp,      transp, transp,
+               transp,      transp,      7,      8,      9,      transp, transp,
+			   transp,      4,      5,      6,      comma, period,
+	       transp,      transp,      1,      2,      3,      transp,      transp,
+                                   0,      transp,      transp,      transp,      transp,
+     transp,      transp,
+     transp,      transp,      transp,
+     transp,      transp,      0  ),
 
 // ............................................................................
 };
