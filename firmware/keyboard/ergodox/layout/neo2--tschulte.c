@@ -186,14 +186,14 @@ KEYS__SHIFTED(    quote,          KEYBOARD__Backslash_Pipe             );
 KEYS__SHIFTED(    semicol,        KEYBOARD__Comma_LessThan             );
 KEYS__SHIFTED(    slash,          KEYBOARD__7_Ampersand                );
 // --- (shifted) ---
-KEYS__ALT_GR (    pipe,           KEYBOARD__LANG5                      );
+KEYS__ALT_GR (    pipe,           KEYBOARD__NonUS_Backslash_Pipe       );
 KEYS__ALT_GR (    braceL,         KEYBOARD__7_Ampersand                );
 KEYS__ALT_GR (    braceR,         KEYBOARD__0_RightParenthesis         );
-KEYS__DEFAULT(    lessThan,       KEYBOARD__LANG5                      );
+KEYS__DEFAULT(    lessThan,       KEYBOARD__NonUS_Backslash_Pipe       );
 KEYS__SHIFTED(    undersc,        KEYBOARD__Slash_Question             );
 KEYS__DEFAULT(    plus,           KEYBOARD__RightBracket_RightBrace    );
-KEYS__ALT_GR (    tilde,          KEYBOARD__RightBracket_RightBrace    );
-KEYS__SHIFTED(    grtrThan,       KEYBOARD__LANG5                      );
+KEYS__NON_DEAD_ALT_GR (    tilde,          KEYBOARD__RightBracket_RightBrace    );
+KEYS__SHIFTED(    grtrThan,       KEYBOARD__NonUS_Backslash_Pipe       );
 KEYS__SHIFTED(    dblQuote,       KEYBOARD__2_At                       );
 KEYS__SHIFTED(    colon,          KEYBOARD__Period_GreaterThan         );
 KEYS__SHIFTED(    question,       KEYBOARD__Dash_Underscore            );
