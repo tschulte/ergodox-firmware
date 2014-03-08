@@ -40,6 +40,75 @@
 
 
 // ----------------------------------------------------------------------------
+// german keymap DE
+// ----------------------------------------------------------------------------
+#define DE_y     z
+#define DE_z     y
+#define DE Y     Z
+#define DE_Z     Y
+
+#define DE_equal        parenR
+#define DE_exclam       exclam
+#define DE_quote        quote
+#define DE_paragraph    at
+#define DE_dollar       pound
+#define DE_percent      
+#define DE_amp          
+#define DE_slash        
+#define DE_parenL       
+#define DE_paranR       
+#define 
+
+KEYS__SHIFTED(    parenR,         KEYBOARD__0_RightParenthesis         );
+KEYS__SHIFTED(    exclam,         KEYBOARD__1_Exclamation              );
+KEYS__SHIFTED(    at,             KEYBOARD__2_At                       );
+KEYS__SHIFTED(    pound,          KEYBOARD__3_Pound                    );
+KEYS__SHIFTED(    dollar,         KEYBOARD__4_Dollar                   );
+KEYS__SHIFTED(    percent,        KEYBOARD__5_Percent                  );
+KEYS__SHIFTED(    caret,          KEYBOARD__6_Caret                    );
+KEYS__SHIFTED(    amp,            KEYBOARD__7_Ampersand                );
+KEYS__SHIFTED(    asterisk,       KEYBOARD__8_Asterisk                 );
+KEYS__SHIFTED(    parenL,         KEYBOARD__9_LeftParenthesis          );
+
+// whitespace and symbols
+KEYS__DEFAULT(    enter,          KEYBOARD__ReturnEnter                );
+KEYS__DEFAULT(    space,          KEYBOARD__Spacebar                   );
+KEYS__DEFAULT(    tab,            KEYBOARD__Tab                        );
+// ---
+KEYS__DEFAULT(    bkslash,        KEYBOARD__Backslash_Pipe             );
+KEYS__DEFAULT(    brktL,          KEYBOARD__LeftBracket_LeftBrace      );
+KEYS__DEFAULT(    brktR,          KEYBOARD__RightBracket_RightBrace    );
+KEYS__DEFAULT(    comma,          KEYBOARD__Comma_LessThan             );
+KEYS__DEFAULT(    dash,           KEYBOARD__Dash_Underscore            );
+KEYS__DEFAULT(    equal,          KEYBOARD__Equal_Plus                 );
+KEYS__DEFAULT(    grave,          KEYBOARD__GraveAccent_Tilde          );
+KEYS__DEFAULT(    period,         KEYBOARD__Period_GreaterThan         );
+KEYS__DEFAULT(    quote,          KEYBOARD__SingleQuote_DoubleQuote    );
+KEYS__DEFAULT(    semicol,        KEYBOARD__Semicolon_Colon            );
+KEYS__DEFAULT(    slash,          KEYBOARD__Slash_Question             );
+// --- (shifted) ---
+KEYS__SHIFTED(    pipe,           KEYBOARD__Backslash_Pipe             );
+KEYS__SHIFTED(    braceL,         KEYBOARD__LeftBracket_LeftBrace      );
+KEYS__SHIFTED(    braceR,         KEYBOARD__RightBracket_RightBrace    );
+KEYS__SHIFTED(    lessThan,       KEYBOARD__Comma_LessThan             );
+KEYS__SHIFTED(    undersc,        KEYBOARD__Dash_Underscore            );
+KEYS__SHIFTED(    plus,           KEYBOARD__Equal_Plus                 );
+KEYS__SHIFTED(    tilde,          KEYBOARD__GraveAccent_Tilde          );
+KEYS__SHIFTED(    grtrThan,       KEYBOARD__Period_GreaterThan         );
+KEYS__SHIFTED(    dblQuote,       KEYBOARD__SingleQuote_DoubleQuote    );
+KEYS__SHIFTED(    colon,          KEYBOARD__Semicolon_Colon            );
+KEYS__SHIFTED(    question,       KEYBOARD__Slash_Question             );
+
+
+#define DE_oe    semicol
+#define DE_ae    quote
+#define DE_ue    brktL
+#define DE_dash  slash
+#define DE_hut   grave
+
+
+
+// ----------------------------------------------------------------------------
 // layout
 // ----------------------------------------------------------------------------
 
@@ -50,23 +119,23 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-       1,        2,        3,        4,        5,        6,      nop,
-     nop,        x,        v,        l,        c,        w,      nop,
-     nop,        u,        i,        a,        e,        o,
-     nop,    brktR,  semicol,    quote,        p,        y,      nop,
+  DE_hut,        1,        2,        3,        4,        5,      nop,
+     nop,        q,        w,        e,        r,        t,      nop,
+     nop,        a,        s,        d,        f,        g,
+     nop,        y,        x,        c,        v,        b,      nop,
      nop,      nop,      nop,      nop,      nop,
                                                                ctrlL,     altL,
                                                        nop,      nop,      nop,
-                                                        bs,      del,      nop,
+                                                     space,      del, shL2kcap,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               nop,        7,        8,        9,        0,    slash,      nop,
-               nop,        k,        h,        g,        f,        q,     dash,
-                           s,        n,        r,        t,        d,        z,
-               nop,        b,        m,    comma,   period,        j,      nop,
-                                   nop,      nop,      nop,      nop,      nop,
+               nop,        6,        7,        8,        9,        0,      nop,
+               nop,        z,        u,        i,        o,        p,    DE_ue,
+                           h,        j,        k,        l,    DE_oe,    DE_ae,
+               nop,        n,        m,    comma,   period,  DE_dash,      nop,
+                                   nop,      nop,      nop,      nop,    caret,
     altR,    ctrlR,
      nop,      nop,      nop,
-     nop,    enter,    space  ),
+shR2kcap,    enter,       bs  ),
 
 // ............................................................................
 
