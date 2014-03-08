@@ -40,6 +40,16 @@
 
 
 // ----------------------------------------------------------------------------
+// german scancodes
+// ----------------------------------------------------------------------------
+#define DE_oe    semicol
+#define DE_ae    quote
+#define DE_ue    brktL
+#define DE_dash  slash
+#define DE_hut   grave
+
+
+// ----------------------------------------------------------------------------
 // layout
 // ----------------------------------------------------------------------------
 
@@ -50,23 +60,23 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-       1,        2,        3,        4,        5,        6,      nop,
-     nop,        x,        v,        l,        c,        w,      nop,
-     nop,        u,        i,        a,        e,        o,
-     nop,    brktR,  semicol,    quote,        p,        y,      nop,
+  DE_hut,        1,        2,        3,        4,        5,      nop,
+     nop,        q,        w,        e,        r,        t,      nop,
+     nop,        a,        s,        d,        f,        g,
+     nop,        y,        x,        c,        v,        b,      nop,
      nop,      nop,      nop,      nop,      nop,
                                                                ctrlL,     altL,
                                                        nop,      nop,      nop,
-                                                        bs,      del,      nop,
+                                                     space,      del, shL2kcap,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               nop,        7,        8,        9,        0,    slash,      nop,
-               nop,        k,        h,        g,        f,        q,     dash,
-                           s,        n,        r,        t,        d,        z,
-               nop,        b,        m,    comma,   period,        j,      nop,
-                                   nop,      nop,      nop,      nop,      nop,
+               nop,        6,        7,        8,        9,        0,      nop,
+               nop,        z,        u,        i,        o,        p,    DE_ue,
+                           h,        j,        k,        l,    DE_oe,    DE_ae,
+               nop,        n,        m,    comma,   period,  DE_dash,      nop,
+                                   nop,      nop,      nop,      nop,    caret,
     altR,    ctrlR,
      nop,      nop,      nop,
-     nop,    enter,    space  ),
+shR2kcap,    enter,       bs  ),
 
 // ............................................................................
 
