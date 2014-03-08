@@ -44,67 +44,45 @@
 // ----------------------------------------------------------------------------
 #define DE_y     z
 #define DE_z     y
-#define DE Y     Z
+#define DE_Y     Z
 #define DE_Z     Y
 
-#define DE_equal        parenR
-#define DE_exclam       exclam
-#define DE_quote        quote
-#define DE_paragraph    at
-#define DE_dollar       pound
-#define DE_percent      
-#define DE_amp          
-#define DE_slash        
-#define DE_parenL       
-#define DE_paranR       
-#define 
-
-KEYS__SHIFTED(    parenR,         KEYBOARD__0_RightParenthesis         );
-KEYS__SHIFTED(    exclam,         KEYBOARD__1_Exclamation              );
-KEYS__SHIFTED(    at,             KEYBOARD__2_At                       );
-KEYS__SHIFTED(    pound,          KEYBOARD__3_Pound                    );
-KEYS__SHIFTED(    dollar,         KEYBOARD__4_Dollar                   );
-KEYS__SHIFTED(    percent,        KEYBOARD__5_Percent                  );
-KEYS__SHIFTED(    caret,          KEYBOARD__6_Caret                    );
-KEYS__SHIFTED(    amp,            KEYBOARD__7_Ampersand                );
-KEYS__SHIFTED(    asterisk,       KEYBOARD__8_Asterisk                 );
-KEYS__SHIFTED(    parenL,         KEYBOARD__9_LeftParenthesis          );
-
-// whitespace and symbols
-KEYS__DEFAULT(    enter,          KEYBOARD__ReturnEnter                );
-KEYS__DEFAULT(    space,          KEYBOARD__Spacebar                   );
-KEYS__DEFAULT(    tab,            KEYBOARD__Tab                        );
+#define DE_equal        parenR    // KEYBOARD__0_RightParenthesis
+#define DE_exclam       exclam    // KEYBOARD__1_Exclamation
+#define DE_quote        quote     // KEYBOARD__2_At
+#define DE_secsign      at        // KEYBOARD__3_Pound
+#define DE_dollar       pound     // KEYBOARD__4_Dollar
+#define DE_percent      percent   // KEYBOARD__5_Percent
+#define DE_amp          caret     // KEYBOARD__6_Caret
+#define DE_slash        amp       // KEYBOARD__7_Ampersand
+#define DE_parenL       asterisk  // KEYBOARD__8_Asterisk
+#define DE_paranR       parenL    // KEYBOARD__9_LeftParenthesis
 // ---
-KEYS__DEFAULT(    bkslash,        KEYBOARD__Backslash_Pipe             );
-KEYS__DEFAULT(    brktL,          KEYBOARD__LeftBracket_LeftBrace      );
-KEYS__DEFAULT(    brktR,          KEYBOARD__RightBracket_RightBrace    );
-KEYS__DEFAULT(    comma,          KEYBOARD__Comma_LessThan             );
-KEYS__DEFAULT(    dash,           KEYBOARD__Dash_Underscore            );
-KEYS__DEFAULT(    equal,          KEYBOARD__Equal_Plus                 );
-KEYS__DEFAULT(    grave,          KEYBOARD__GraveAccent_Tilde          );
-KEYS__DEFAULT(    period,         KEYBOARD__Period_GreaterThan         );
-KEYS__DEFAULT(    quote,          KEYBOARD__SingleQuote_DoubleQuote    );
-KEYS__DEFAULT(    semicol,        KEYBOARD__Semicolon_Colon            );
-KEYS__DEFAULT(    slash,          KEYBOARD__Slash_Question             );
-// --- (shifted) ---
-KEYS__SHIFTED(    pipe,           KEYBOARD__Backslash_Pipe             );
-KEYS__SHIFTED(    braceL,         KEYBOARD__LeftBracket_LeftBrace      );
-KEYS__SHIFTED(    braceR,         KEYBOARD__RightBracket_RightBrace    );
-KEYS__SHIFTED(    lessThan,       KEYBOARD__Comma_LessThan             );
-KEYS__SHIFTED(    undersc,        KEYBOARD__Dash_Underscore            );
-KEYS__SHIFTED(    plus,           KEYBOARD__Equal_Plus                 );
-KEYS__SHIFTED(    tilde,          KEYBOARD__GraveAccent_Tilde          );
-KEYS__SHIFTED(    grtrThan,       KEYBOARD__Period_GreaterThan         );
-KEYS__SHIFTED(    dblQuote,       KEYBOARD__SingleQuote_DoubleQuote    );
-KEYS__SHIFTED(    colon,          KEYBOARD__Semicolon_Colon            );
-KEYS__SHIFTED(    question,       KEYBOARD__Slash_Question             );
+#define DE_lessThan     bkslash   // KEYBOARD__Backslash_Pipe
+#define DE_ue           brktL     // KEYBOARD__LeftBracket_LeftBrace
+#define DE_plus         brktR     // KEYBOARD__RightBracket_RightBrace
+#define DE_comma        comma     // KEYBOARD__Comma_LessThan
+#define DE_sz           dash      // KEYBOARD__Dash_Underscore
+#define DE_acute        equal     // KEYBOARD__Equal_Plus
+#define DE_caret        grave     // KEYBOARD__GraveAccent_Tilde
+#define DE_period       period    // KEYBOARD__Period_GreaterThan
+#define DE_ae           quote     // KEYBOARD__SingleQuote_DoubleQuote
+#define DE_oe           semicol   // KEYBOARD__Semicolon_Colon
+#define DE_dash         slash     // KEYBOARD__Slash_Question
+// shifted
+#define DE_grtrThan     pipe      // KEYBOARD__Backslash_Pipe
+#define DE_UE           braceL    // KEYBOARD__LeftBracket_LeftBrace
+#define DE_asterisk     braceR    // KEYBOARD__RightBracket_RightBrace
+#define DE_semicol      lessThan  // KEYBOARD__Comma_LessThan
+#define DE_question     undersc   // KEYBOARD__Dash_Underscore
+#define DE_grave        plus      // KEYBOARD__Equal_Plus
+#define DE_ring         tilde     // KEYBOARD__GraveAccent_Tilde
+#define DE_colon        grtThan   // KEYBOARD__Period_GreaterThan
+#define DE_AE           dbQuote   // KEYBOARD__SingleQuote_DoubleQuote
+#define DE_OE           colon     // KEYBOARD__Semicolon_Colon
+#define DE_undersc      question  // KEYBOARD__Slash_Question
 
 
-#define DE_oe    semicol
-#define DE_ae    quote
-#define DE_ue    brktL
-#define DE_dash  slash
-#define DE_hut   grave
 
 
 
@@ -119,7 +97,7 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-  DE_hut,        1,        2,        3,        4,        5,      nop,
+DE_caret,        1,        2,        3,        4,        5,      nop,
      nop,        q,        w,        e,        r,        t,      nop,
      nop,        a,        s,        d,        f,        g,
      nop,        y,        x,        c,        v,        b,      nop,
@@ -131,8 +109,8 @@ static layout_t layout PROGMEM = {
                nop,        6,        7,        8,        9,        0,      nop,
                nop,        z,        u,        i,        o,        p,    DE_ue,
                            h,        j,        k,        l,    DE_oe,    DE_ae,
-               nop,        n,        m,    comma,   period,  DE_dash,      nop,
-                                   nop,      nop,      nop,      nop,    caret,
+               nop,        n,        m, DE_comma,DE_period,  DE_dash,      nop,
+                                   nop,      nop,      nop,      nop,    grave, // TODO: # pound in us?
     altR,    ctrlR,
      nop,      nop,      nop,
 shR2kcap,    enter,       bs  ),
