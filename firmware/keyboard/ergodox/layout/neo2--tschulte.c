@@ -261,7 +261,7 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-     esc,        1,        2,        3,        4,        5,      dead_aigu,
+     esc,        1,        2,        3,        4,        5,      dead_caret,
      ins,        x,        v,        l,        c,        w,      del,
      nop,        u,        i,        a,        e,        o,
      nop,        ue,       oe,       ae,       p,        z,      tab,
@@ -270,7 +270,7 @@ static layout_t layout PROGMEM = {
                                                                 nop,      nop,      home,
                                                                 lpupo1l1, shiftL,   end,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               dead_grave,    6,        7,        8,        9,        0,      dead_caret,
+               dead_aigu,     6,        7,        8,        9,        0,      dead_grave,
                bs,            k,        h,        g,        f,        q,      sz,
                               s,        n,        r,        t,        d,      y,
                space,         b,        m,        comma,    period,   j,      enter,
