@@ -266,18 +266,18 @@ static layout_t layout PROGMEM = {
      nop,        u,        i,        a,        e,        o,
      nop,        ue,       oe,       ae,       p,        z,      tab,
      nop,        nop,      nop,      guiL,     lpupo2l2,
-                                                                          ctrlL,    altL,
-                                                                nop,      nop,      home,
-                                                                lpupo1l1, shiftL,   end,
+                                                                          home,     end,
+                                                                nop,      nop,      altL,
+                                                                lpupo1l1, shiftL,   ctrlL,
 // right hand ..... ......... ......... ......... ......... ......... .........
                dead_aigu,     6,        7,        8,        9,        0,      dead_grave,
                bs,            k,        h,        g,        f,        q,      sz,
                               s,        n,        r,        t,        d,      y,
                space,         b,        m,        comma,    period,   j,      enter,
                                         lpupo2l2, guiR,     nop,      nop,    nop,
-   altL,    ctrlR,
-   pageU,      nop,      nop,
-   pageD,    shiftR,    lpupo1l1  ),
+   pageU,    pageD,
+   altL,     nop,      nop,
+   ctrlR,    shiftR,    lpupo1l1  ),
 
 // ............................................................................
 
