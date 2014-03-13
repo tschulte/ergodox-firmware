@@ -268,7 +268,7 @@ static layout_t layout PROGMEM = {
      app,        guiL,     nop,      nop,      lpupo2l2,
                                                                           home,     end,
                                                                 nop,      nop,      altL,
-                                                                shiftL,   lpupo1l1, ctrlL,
+                                                                lpupo1l1, shiftL,   ctrlL,
 // right hand ..... ......... ......... ......... ......... ......... .........
                dead_aigu,     6,        7,        8,        9,        0,      dead_grave,
                bs,            k,        h,        g,        f,        q,      sz,
@@ -277,7 +277,7 @@ static layout_t layout PROGMEM = {
                                         lpupo2l2, nop,      nop,      guiR,   app,
    pageU,    pageD,
    altL,     nop,      nop,
-   ctrlR,    lpupo1l1, shiftR  ),
+   ctrlR,    shiftR,    lpupo1l1  ),
 
 // ............................................................................
 
