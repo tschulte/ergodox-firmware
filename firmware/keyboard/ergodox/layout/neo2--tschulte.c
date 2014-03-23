@@ -312,7 +312,7 @@ static layout_t layout PROGMEM = {
    btldr,       transp,      transp,      transp,      transp,      transp,      transp,
    transp,      pageU,       bs,          arrowU,      del,         pageD,       transp,
    transp,      home,        arrowL,      arrowD,      arrowR,      end,
-   transp,      transp,      transp,      transp,      transp,      transp,      transp,
+   transp,      transp,      tab,         transp,      enter,       transp,      transp,
    transp,      transp,      transp,      transp,      transp,
                                                                                   transp,      transp,
                                                                      transp,      transp,      transp,
