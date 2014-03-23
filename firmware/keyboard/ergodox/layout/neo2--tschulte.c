@@ -285,7 +285,7 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-  btldr,       F1,         F2,         F3,          F4,        F5,        F6,
+  transp,      transp,     transp,     transp,      transp,    transp,    transp,
   transp,      nop,        undersc,    brktL,       brktR,     caret,     transp,
   transp,      bkslash,    slash,      braceL,      braceR,    asterisk,
   transp,      pound,      dollar,     pipe,        tilde,     grave,     transp,
@@ -294,7 +294,7 @@ static layout_t layout PROGMEM = {
                                                                 transp,   transp,   transp,
                                                                 transp,   transp,   transp,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               F7,       F8,           F9,          F10,        F11,      F12,         transp,
+               transp,   transp,       transp,      transp,     transp,   transp,      transp,
                transp,   exclam,       lessThan,    grtrThan,   equal,    amp,         transp,
                          question,     parenL,      parenR,     dash,     colon,       at,
                transp,   plus,         percent,     dblQuote,   quote,    semicol,     transp,
@@ -328,5 +328,29 @@ static layout_t layout PROGMEM = {
      transp,      transp,      transp  ),
 
 // ............................................................................
+    MATRIX_LAYER(  // layer for F1-F12
+// macro, unused,
+       K,    nop,
+// left hand ...... ......... ......... ......... ......... ......... .........
+  btldr,       F1,         F2,         F3,          F4,        F5,        F6,
+  transp,      transp,     transp,     transp,      transp,    transp,    transp,
+  transp,      transp,     transp,     transp,      transp,    transp,
+  transp,      transp,     transp,     transp,      transp,    transp,    transp,
+  transp,      transp,     transp,     transp,      transp,
+                                                                          transp,   transp,
+                                                                transp,   transp,   transp,
+                                                                transp,   transp,   transp,
+// right hand ..... ......... ......... ......... ......... ......... .........
+               F7,       F8,           F9,          F10,        F11,      F12,         transp,
+               transp,   transp,       transp,      transp,     transp,   transp,      transp,
+                         transp,       transp,      transp,     transp,   transp,      transp,
+               transp,   transp,       transp,      transp,     transp,   transp,      transp,
+                                       transp,      transp,     transp,   transp,      transp,
+  transp,   transp,
+  transp,   transp,   transp,
+  transp,   transp,   transp  ),
+
+// ............................................................................
+
 };
 
