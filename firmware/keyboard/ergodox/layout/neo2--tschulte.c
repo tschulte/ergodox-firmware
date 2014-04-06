@@ -192,7 +192,7 @@ KEYS__ALT_GR (    braceR,         KEYBOARD__0_RightParenthesis         );
 KEYS__DEFAULT(    lessThan,       KEYBOARD__NonUS_Backslash_Pipe       );
 KEYS__SHIFTED(    undersc,        KEYBOARD__Slash_Question             );
 KEYS__DEFAULT(    plus,           KEYBOARD__RightBracket_RightBrace    );
-KEYS__NON_DEAD_ALT_GR (    tilde,          KEYBOARD__RightBracket_RightBrace    );
+KEYS__ALT_GR (    tilde,          KEYBOARD__RightBracket_RightBrace    );
 KEYS__SHIFTED(    grtrThan,       KEYBOARD__NonUS_Backslash_Pipe       );
 KEYS__SHIFTED(    dblQuote,       KEYBOARD__2_At                       );
 KEYS__SHIFTED(    colon,          KEYBOARD__Period_GreaterThan         );
