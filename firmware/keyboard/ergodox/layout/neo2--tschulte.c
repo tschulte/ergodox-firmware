@@ -159,7 +159,7 @@ KEYS__SHIFTED(    dead_grave,     KEYBOARD__Equal_Plus                 );
 KEYS__DEFAULT(    dead_caret,     KEYBOARD__GraveAccent_Tilde          );
 
 KEYS__NON_DEAD(   aigu,           KEYBOARD__Equal_Plus                 );
-KEYS__NON_DEAD(   grave,          KEYBOARD__Equal_Plus                 );
+KEYS__NON_DEAD_SHIFTED(   grave,          KEYBOARD__Equal_Plus                 );
 KEYS__NON_DEAD(   caret,          KEYBOARD__GraveAccent_Tilde          );
 
 
