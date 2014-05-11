@@ -71,23 +71,23 @@ KB_MATRIX_LAYER(
 	// unused
 	0,
 	// left hand
-	_esc,		_1,		_2,		_3,		_4,		_5,		0,
-	0,		_X,		_V,		_L,		_C,		_W,		_tab,
-	0,		_U,		_I,		_A,		_E,		_O,
-	_shiftL,	_bracketL,	_semicolon,	_quote,		_P,		_Y,		_del,
+	_esc,		_1,			_2,			_3,			_4,			_5,		0,
+	0,			_X,			_V,			_L,			_C,			_W,		_tab,
+	0,			_U,			_I,			_A,			_E,			_O,
+	_shiftL,	_bracketL,	_semicolon,	_quote,		_P,			_Y,		_del,
 	_cut,		_copy,		_paste,		_find,		_backslash,
-									2,		_select,
-									0,		0,		_ctrlL,
-									_bs,		_altL, 		_capsLock,
+													2,		_select,
+											0,		0,		_ctrlL,
+											_bs,	_altL, 	_capsLock,
 	// right hand
-	0,		_6,		_7,		_8,		_9,		_0,	0,
-	_home,		_K,		_H,		_G,		_F,		_Q,	0,
-			_S,		_N,		_R,		_T,		_D,	_Z,
-	_end,		_B,		_M,		_comma,		_period,	_J,	_shiftR,
-	_altR,		_print,		_menu,		_pageU,		_pageD,
-									0,		0,
-									_ctrlR,		0,		0,
-									_capsLock,	_shiftR,		_space
+	0,			_6,		_7,		_8,		_9,			_0,			0,
+	_home,		_K,		_H,		_G,		_F,			_Q,			0,
+				_S,		_N,		_R,		_T,			_D,			_Z,
+	_end,		_B,		_M,		_comma,	_period,	_J,			_shiftR,
+	_altR,		_print,	_menu,	_pageU,	_pageD,
+													0,		0,
+										_ctrlR,		0,		0,
+										_capsLock,	_shiftR,_space
 ),
 // LAYER 1
 KB_MATRIX_LAYER(
@@ -174,7 +174,7 @@ KB_MATRIX_LAYER(
 	// right hand
 	0,	0,	0,	0,	0,	0,	0,
 	0,	0,	0,	0,	0,	0,	0,
-	0,	0,	0,	0,	0,	0,
+	0,	188,	0,	0,	0,	0,
 	0,	0,	0,	0,	0,	0,	0,
 	0,	0,	0,	0,	0,
 	0,	0,
