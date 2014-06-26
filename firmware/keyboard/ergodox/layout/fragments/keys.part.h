@@ -21,6 +21,18 @@
     void P(name) (void) { KF(press)(value); }   \
     void R(name) (void) { KF(release)(value); }
 
+/**                                            macros/TYPE__DEFAULT/description
+ * Define the functions for a default key (i.e. a normal key that presses and
+ * releases a keycode as you'd expect). Other than KEYS_DEFAULT, this does send
+ * a press and release event on key press and does not wait for the user
+ * releasing the key.
+ */
+#define  TYPE__DEFAULT(name, value)                   \
+    void P(name) (void) { KF(press)(value);           \
+                          usb__kb__send_report();     \
+                          KF(release)(value); }       \
+    void R(name) (void) { }
+
 /**                                            macros/KEYS__SHIFTED/description
  * Define the functions for a "shifted" key (i.e. a key that sends a "shift"
  * along with the keycode)
@@ -33,11 +45,24 @@
     void R(name) (void) { KF(release)(value);                   \
                           KF(release)(KEYBOARD__LeftShift); }
 
+/**                                            macros/TYPE__SHIFTED/description
+ * Define the functions for a "shifted" key (i.e. a key that sends a "shift"
+ * along with the keycode). Other than KEYS_SHIFTED, this does send
+ * a press and release event on key press and does not wait for the user
+ * releasing the key.
+ */
+#define  TYPE__SHIFTED(name, value)                             \
+    void P(name) (void) { KF(press)(KEYBOARD__LeftShift);       \
+                          usb__kb__send_report();               \
+                          KF(press)(value);                     \
+                          usb__kb__send_report();               \
+                          KF(release)(value);                   \
+                          KF(release)(KEYBOARD__LeftShift); }   \
+    void R(name) (void) { }
+
 /**                                            macros/KEYS__ALT_GR/description
  * Define the functions for a "AltGr" key (i.e. a key that sends a "AltGr"
- * along with the keycode)
- *
- * Needed by ".../lib/layout/keys.h"
+ * along with the keycode).
  */
 #define  KEYS__ALT_GR(name, value)                             \
     void P(name) (void) { KF(press)(KEYBOARD__RightAlt);       \
@@ -45,12 +70,25 @@
     void R(name) (void) { KF(release)(value);                  \
                           KF(release)(KEYBOARD__RightAlt); }
 
-/**                                            macros/KEYS__NON_DEAD/description
- * Define the functions for a normally dead key, to be non-dead.
- *
- * Needed by ".../lib/layout/keys.h"
+/**                                            macros/TYPE__ALT_GR/description
+ * Define the functions for a "AltGr" key (i.e. a key that sends a "AltGr"
+ * along with the keycode). Other than KEYS_SHIFTED, this does send
+ * a press and release event on key press and does not wait for the user
+ * releasing the key.
  */
-#define  KEYS__NON_DEAD(name, value)                           \
+#define  TYPE__ALT_GR(name, value)                             \
+    void P(name) (void) { KF(press)(KEYBOARD__RightAlt);       \
+                          usb__kb__send_report();              \
+                          KF(press)(value);                    \
+                          usb__kb__send_report();              \
+                          KF(release)(value);                  \
+                          KF(release)(KEYBOARD__RightAlt); }   \
+    void R(name) (void) { }
+
+/**                                            macros/TYPE__NON_DEAD/description
+ * Define the functions for a normally dead key, to be non-dead.
+ */
+#define  TYPE__NON_DEAD(name, value)                           \
     void P(name) (void) { KF(press)(value);                    \
                           usb__kb__send_report();              \
                           KF(release)(value);                  \
@@ -60,13 +98,13 @@
                           KF(release)(KEYBOARD__Spacebar); }   \
     void R(name) (void) {}
 
-/**                                            macros/KEYS__NON_DEAD_SHIFTED/description
- * Define the functions for a normally dead key, to be non-dead.
- *
- * Needed by ".../lib/layout/keys.h"
+/**                                            macros/TYPE__NON_DEAD_SHIFTED/description
+ * Define the functions for a normally dead key, which needs the "shift"
+ * key to be pressed, to be non-dead.
  */
-#define  KEYS__NON_DEAD_SHIFTED(name, value)                   \
+#define  TYPE__NON_DEAD_SHIFTED(name, value)                   \
     void P(name) (void) { KF(press)(KEYBOARD__LeftShift);      \
+                          usb__kb__send_report();              \
                           KF(press)(value);                    \
                           usb__kb__send_report();              \
                           KF(release)(value);                  \
@@ -77,13 +115,13 @@
                           KF(release)(KEYBOARD__Spacebar); }   \
     void R(name) (void) {}
 
-/**                                            macros/KEYS__NON_DEAD_ALT_GR/description
- * Define the functions for a normally dead key, to be non-dead.
- *
- * Needed by ".../lib/layout/keys.h"
+/**                                            macros/TYPE__NON_DEAD_ALT_GR/description
+ * Define the functions for a normally dead key, which needs the "AltGr"
+ * key, to be non-dead.
  */
-#define  KEYS__NON_DEAD_ALT_GR(name, value)                    \
+#define  TYPE__NON_DEAD_ALT_GR(name, value)                    \
     void P(name) (void) { KF(press)(KEYBOARD__RightAlt);       \
+                          usb__kb__send_report();              \
                           KF(press)(value);                    \
                           usb__kb__send_report();              \
                           KF(release)(value);                  \
