@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # [Firmware][ergodox-firmware] for the [ErgoDox keyboard][]
+=======
+# rev-2 (`partial-rewrite`)
+>>>>>>> refs/remotes/ndt-neo/neo2--ndt
 
+<<<<<<< HEAD
 The official website is [ergodox.org] (http://www.ergodox.org).  
 Also see the [geekhack]
 (http://geekhack.org/showthread.php?22780-Interest-Check-Custom-split-ergo-keyboard)
@@ -10,7 +15,13 @@ Kits are periodically for sale [on Massdrop] (https://www.massdrop.com/buy/ergod
 who also hosts [build instructions] (https://www.massdrop.com/ext/ergodox/assembly.php)
 and a [web UI] (https://www.massdrop.com/ext/ergodox)
 for configuring layouts.
+=======
+This branch is currently under development, and all parts are subject to
+change.  I'll do my very best to keep the latest commit working properly
+though.
+>>>>>>> refs/remotes/ndt-neo/neo2--ndt
 
+<<<<<<< HEAD
 
 ### Notes
 A rewrite is currently underway (see the 'partial-rewrite' branch) and so this
@@ -57,7 +68,12 @@ changed since this document was last properly updated:
 	- [Compile the Source Code](#compile-the-source-code)
 	- [Create a New Keymap](#create-a-new-keymap)
 	- [Add Code for a Different Type of Keyboard](#add-code-for-a-different-type-of-keyboard)
+=======
+Source level documentation is being written with the code.  Other documentation
+(including a better readme) will be written afterwards.
+>>>>>>> refs/remotes/ndt-neo/neo2--ndt
 
+<<<<<<< HEAD
 
 ## About This File
 
@@ -221,9 +237,29 @@ After getting set up:
 
 * Your firmware is now loaded!  Press a few buttons on your keyboard to make
   sure everything worked out all right, and enjoy :)
+=======
+**Pull requests for this branch will almost certainly not be accepted at this
+time.**  
+Sorry.  It's a bit hard to explain exactly why.  Perhaps it will be
+understandable if I just say that I've been working on this project for quite a
+while now, and at this point rev-2 is kind of my baby.  One of my goals for it
+is to not only have it work and have decent features, but be well designed and
+well documented to the point that someone starting out where I did could pick
+it up and learn without having to write their own.  Until it grows up, and I
+send it out into the real world by moving it to the master branch, I'm likely
+to feel very protective of it.
+>>>>>>> refs/remotes/ndt-neo/neo2--ndt
 
 Notes:
+* Gyuri Horak (dyuri) implemented NKRO and mouse keys in [his branch]
+  (https://github.com/dyuri/ergodox-firmware) of rev-2.  Not merged, but I plan
+  to implement the features later, if I can.  See [Pull Request #28]
+  (https://github.com/benblazak/ergodox-firmware/pull/28).
+* Oleg Kostyuk (cub-uanic) [ported the TMK firmware]
+  (https://github.com/cub-uanic/tmk_keyboard)
+  (written by "hasu") to the ErgoDox!
 
+<<<<<<< HEAD
 * It may not be necessary to load the '.eep' file (if the file is 0 bytes, and
   the Teensy doesn't have anything loaded into its EEPROM already, it doesn't
   make any difference), but it's good to do so anyway, just to be safe.  It
@@ -371,4 +407,12 @@ your goal.
 Copyright &copy; 2012 Ben Blazak <benblazak.dev@gmail.com>  
 Released under The MIT License (MIT) (see "license.md")  
 Project located at <https://github.com/benblazak/ergodox-firmware>
+=======
+Status:
+* School is starting again late August 2013.  It looks to be a busy semester,
+  so I may not have that much time to work on it.  I wasn't able to get nearly
+  the amount done this summer that I had hoped, other things taking precedence,
+  but I still plan to finish everything I've already talked about: macro
+  recording, (attempt) USB features, layout examples, and other documentation.
+>>>>>>> refs/remotes/ndt-neo/neo2--ndt
 
