@@ -282,7 +282,7 @@ static layout_t layout PROGMEM = {
 
 // ............................................................................
 
-    MATRIX_LAYER(  // layer TODO : symbols and function keys
+    MATRIX_LAYER(  // layer mod3 : symbols and function keys
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
@@ -306,14 +306,14 @@ static layout_t layout PROGMEM = {
 
 // ............................................................................
 
-    MATRIX_LAYER(  // layer TODO : keyboard functions
+    MATRIX_LAYER(  // layer mod4 : keyboard functions
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
    transp,       transp,      transp,      transp,      transp,      transp,      transp,
    transp,      pageU,       bs,          arrowU,      del,         pageD,       transp,
    transp,      home,        arrowL,      arrowD,      arrowR,      end,
-   transp,      transp,      tab,         transp,      enter,       transp,      transp,
+   transp,      esc,         tab,         ins,         enter,       transp,      transp,
    transp,      transp,      transp,      transp,      transp,
                                                                                   transp,      transp,
                                                                      transp,      transp,      transp,
