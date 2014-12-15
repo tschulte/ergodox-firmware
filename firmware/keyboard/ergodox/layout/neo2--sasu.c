@@ -323,10 +323,10 @@ static layout_t layout PROGMEM = {
                transp,      transp,      7,         8,         9,         plus,       dash,
                             transp,      4,         5,         6,         comma,      period,
                transp,      colon,      1,         2,         3,         semicol,    transp,
-                                         0,         transp,      transp,      transp,     transp,
+                                        transp,         transp,      transp,      transp,     transp,
      transp,      transp,
      transp,      transp,      transp,
-     transp,      transp,      transp  ),
+     transp,      transp,      0  ),
 
 // ............................................................................
     MATRIX_LAYER(  // layer for F1-F12
