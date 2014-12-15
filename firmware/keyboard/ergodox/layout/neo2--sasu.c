@@ -295,7 +295,7 @@ static layout_t layout PROGMEM = {
                                                                 transp,   transp,   transp,
                                                                 transp,   transp,   transp,
 // right hand ..... ......... ......... ......... ......... ......... .........
-               transp,   transp,       transp,      transp,     transp,   transp,      transp,
+               transp,   transp,       eur,      	transp,     transp,   transp,      transp,
                transp,   exclam,       lessThan,    grtrThan,   equal,    amp,         transp,
                          question,     parenL,      parenR,     dash,     colon,       at,
                transp,   plus,         percent,     dblQuote,   quote,    semicol,     transp,
@@ -310,7 +310,7 @@ static layout_t layout PROGMEM = {
 // macro, unused,
        K,    nop,
 // left hand ...... ......... ......... ......... ......... ......... .........
-   transp,       transp,      transp,      transp,      transp,      transp,      transp,
+   transp,       transp,      transp,      transp,      transp,     transp,      transp,
    transp,      pageU,       bs,          arrowU,      del,         pageD,       transp,
    transp,      home,        arrowL,      arrowD,      arrowR,      end,
    transp,      esc,         tab,         ins,         enter,       transp,      transp,
@@ -322,7 +322,7 @@ static layout_t layout PROGMEM = {
                transp,      transp,      transp,      tab,      slash,      asterisk,     transp,
                transp,      transp,      7,         8,         9,         plus,       dash,
                             transp,      4,         5,         6,         comma,      period,
-               transp,      colon,      1,         2,         3,         semicol,    transp,
+               transp,      colon,       1,         2,         3,         semicol,    transp,
                                         transp,         transp,      transp,      transp,     transp,
      transp,      transp,
      transp,      transp,      transp,
