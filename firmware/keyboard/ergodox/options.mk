@@ -21,7 +21,7 @@ F_CPU := 16000000
 # processor speed, in Hz; max value is 16000000 (16MHz); must match
 # initialization in source
 
-KEYBOARD_LAYOUT := neo2--ndt
+KEYBOARD_LAYOUT := neo2--sasu
 # default layout for this keyboard
 
 KEYBOARD_LAYOUTS := \
@@ -31,7 +31,7 @@ KEYBOARD_LAYOUTS := \
 	colemak--kinesis-mod \
 	dvorak--kinesis-mod \
 	qwerty--kinesis-mod \
-	neo2--ndt
+	neo2--tschulte 
 # a list of all available layouts for this keyboard
 
 # -----------------------------------------------------------------------------
@@ -49,8 +49,4 @@ SRC += $(wildcard $(CURDIR)/controller/*.c)
 SRC += $(wildcard $(CURDIR)/layout/$(KEYBOARD_LAYOUT)*.c)
 
 CFLAGS += -include $(wildcard $(CURDIR)/options.h)
-
-$(CURDIR)/layout/qwerty-kinesis-mod.o: $(wildcard $(CURDIR)/layout/common/*)
-$(CURDIR)/layout/dvorak-kinesis-mod.o: $(wildcard $(CURDIR)/layout/common/*)
-$(CURDIR)/layout/colemak-symbol-mod.o: $(wildcard $(CURDIR)/layout/common/*)
 
