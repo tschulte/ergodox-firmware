@@ -274,7 +274,7 @@ static layout_t layout PROGMEM = {
                enter,         k,        h,        g,        f,        q,      sz,
                               s,        n,        r,        t,        d,      y,
                del,           b,        m,        comma,    period,   j,      shiftR,
-                                        prScr, app,      nop,      guiR,   nop,
+                              			lpupo2l2, prScr, 	app,   	  guiR,   nop,
    altL, lpupo1l1,
    ctrlR,     nop,      nop,
    bs,    lpupo1l1,   space
