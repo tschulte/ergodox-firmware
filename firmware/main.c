@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include "./keyboard.h"
 #include "./lib/timer.h"
-#include ".//lib/usb.h"
+#include "./lib/usb.h"
 #include "./main.h"
 
 // ----------------------------------------------------------------------------
