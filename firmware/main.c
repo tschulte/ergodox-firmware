@@ -15,9 +15,9 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>
-#include "../firmware/keyboard.h"
-#include "../firmware/lib/timer.h"
-#include "../firmware/lib/usb.h"
+#include "./keyboard.h"
+#include "./lib/timer.h"
+#include ".//lib/usb.h"
 #include "./main.h"
 
 // ----------------------------------------------------------------------------
