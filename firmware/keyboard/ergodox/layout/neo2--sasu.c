@@ -271,9 +271,9 @@ static layout_t layout PROGMEM = {
                                                                 enter, lpupo1l1,   ctrlL,
 // right hand ..... ......... ......... ......... ......... ......... .........
                dead_aigu,     6,        7,        8,        9,        0,      dead_grave,
-               enter,         k,        h,        g,        f,        q,      sz,
-                              s,        n,        r,        t,        d,      y,
-               del,           b,        m,        comma,    period,   j,      shiftR,
+               nop,         k,        h,        g,        f,        q,      sz,
+                            s,        n,        r,        t,        d,      y,
+               sz,          b,        m,        comma,    period,   j,      shiftR,
                               			lpupo2l2, prScr, 	app,   	  guiR,   nop,
    altL, lpupo1l1,
    ctrlR,     nop,      nop,
@@ -312,7 +312,7 @@ static layout_t layout PROGMEM = {
 // left hand ...... ......... ......... ......... ......... ......... .........
    transp,       transp,      transp,      transp,      transp,     transp,      transp,
    transp,      pageU,       bs,          arrowU,      del,         pageD,       transp,
-   ctrlR,      home,        arrowL,      arrowD,      arrowR,      end,
+   ctrlL,      home,        arrowL,      arrowD,      arrowR,      end,
    transp,      esc,         tab,         ins,         enter,       transp,      transp,
    transp,      transp,      transp,      transp,      transp,
                                                                                   transp,      transp,
